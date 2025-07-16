@@ -37,6 +37,17 @@ header h1 {
     font-weight: 700;
 }
 
+/* "made by 수훈" 텍스트 스타일 */
+header h1 .made-by {
+    font-size: 0.4em; /* h1 폰트 크기의 40% (더 작게) */
+    color: #777; /* 회색으로 표시 */
+    font-weight: 400; /* 보통 두께 */
+    vertical-align: super; /* 살짝 위로 올림 */
+    margin-left: 5px; /* 왼쪽 여백 */
+    white-space: nowrap; /* 줄바꿈 방지 */
+}
+
+
 header p {
     color: #777;
     margin-bottom: 35px;
@@ -193,13 +204,10 @@ button:disabled {
     box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
-/* 저작권 푸터 관련 스타일이 제거되었습니다. */
-
 /* 반응형 디자인을 위한 미디어 쿼리 */
 @media (max-width: 600px) {
     body {
-        /* 모바일에서는 body의 중앙 정렬을 유지하면서, 콘텐츠가 넘칠 경우 스크롤 가능하게 */
-        justify-content: flex-start; /* 콘텐츠를 위쪽으로 붙여서 스크롤 가능하게 함 */
+        justify-content: flex-start; /* 모바일에서 내용을 위쪽부터 정렬 */
         align-items: center; /* 중앙 정렬 유지 */
         padding-top: 20px; /* 상단 여백 추가 */
         padding-bottom: 20px; /* 하단 여백 추가 */
@@ -207,18 +215,21 @@ button:disabled {
 
     #app-container {
         width: 90%;
-        max-width: none; /* 모바일에서는 최대 너비 제한 제거 */
+        max-width: none;
         padding: 30px 20px;
         border-radius: 15px;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        justify-content: flex-start; /* 내부 요소 위쪽 정렬 */
-        margin: 0 auto; /* 가운데 정렬 */
-        min-height: auto; /* 내용에 따라 높이 자동 조절 */
+        justify-content: flex-start;
+        margin: 0 auto;
+        min-height: auto;
     }
 
     header h1 {
-        font-size: 2em;
-        margin-bottom: 10px;
+        font-size: 1.8em; /* 모바일에서 제목 크기 조절 */
+    }
+
+    header h1 .made-by {
+        font-size: 0.5em; /* 모바일에서 'made by' 텍스트 크기 조절 */
     }
 
     header p {
@@ -277,6 +288,4 @@ button:disabled {
         margin-bottom: 6px;
         border-radius: 8px;
     }
-
-    /* 푸터 스타일도 제거되었으므로 모바일 미디어 쿼리에서 푸터 관련 스타일도 제거했습니다. */
 }
