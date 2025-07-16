@@ -42,7 +42,7 @@ const questions = [
             { text: "'아... 오늘 약속이 있었는데... 일단 상황 들어보고 최대한 도와줄게.' 라며 계산기를 두드린다. (손익분기점 따지는 중)", score: 7 },
             { text: "'나 오늘 몸이 안 좋아서 죽겠네...' 라며 가짜 기침을 한다. (명배우 납시오)", score: 4 },
             { text: "전화기를 던지고 다시 잠든다. (프로 잠수러)", score: 1 }
-        ]
+            ]
     },
     {
         question: "나에게 약간의 손해가 있지만, 다른 사람에게는 로또 당첨급 도움이 되는 상황이라면?",
@@ -123,7 +123,7 @@ const results = [
     {
         minScore: 110,
         title: "만인의 위로자: 천사인가요? 날개 숨기지 마요!",
-        image: "https://via.placeholder.com/400x200?text=Result+Image+1", // 실제 이미지 URL로 교체하세요!
+        image: "https://via.placeholder.com/400x200?text=만인의+위로자", // 실제 이미지 URL로 교체하세요!
         description: "당신은 세상의 모든 착함을 품고 있는 보기 드문 존재입니다. 타인의 아픔을 자신의 것처럼 느끼고, 희생을 두려워하지 않는 진정한 보살입니다. 당신의 주변에는 항상 따뜻한 온기가 감돌 거예요.",
         traits: ["이타심 만렙", "공감 능력 최강", "배려의 아이콘", "말없이 실천하는 행동가"],
         advice: "너무 착해서 손해 볼까 걱정됩니다. 가끔은 '나' 자신도 돌보는 이기적인 착함도 필요해요!"
@@ -131,7 +131,7 @@ const results = [
     {
         minScore: 90,
         title: "정의로운 착함: 츤데레 매력의 히어로!",
-        image: "https://via.placeholder.com/400x200?text=Result+Image+2", // 실제 이미지 URL로 교체하세요!
+        image: "https://via.placeholder.com/400x200?text=정의로운+착함", // 실제 이미지 URL로 교체하세요!
         description: "당신은 겉으로는 차가워 보일 수 있지만, 속은 누구보다 따뜻하고 정의롭습니다. 불의를 보면 참지 못하고, 옳은 일을 위해서는 망설이지 않죠. 당신의 츤데레 같은 착함에 주변 사람들은 매력을 느낍니다.",
         traits: ["강력한 정의감", "솔직하고 직설적", "행동으로 보여주는 타입", "칼 같지만 따뜻함"],
         advice: "가끔은 부드러운 말 한마디가 더 큰 감동을 줄 수 있어요. 속마음을 좀 더 표현해 보세요!"
@@ -139,7 +139,7 @@ const results = [
     {
         minScore: 70,
         title: "실용적인 착함: 현실적인 해결사!",
-        image: "https://via.placeholder.com/400x200?text=Result+Image+3", // 실제 이미지 URL로 교체하세요!
+        image: "https://via.placeholder.com/400x200?text=실용적인+착함", // 실제 이미지 URL로 교체하세요!
         description: "당신은 감정적인 공감보다는 실질적인 도움을 주는 데 능숙합니다. 문제 해결 능력이 뛰어나며, 현실적인 조언으로 주변 사람들에게 큰 힘이 되어줍니다. 당신의 착함은 매우 현실적이고 도움이 됩니다.",
         traits: ["문제 해결 능력 우수", "실용주의자", "현실적인 조언가", "효율적인 도움"],
         advice: "가끔은 이성적인 판단보다는 따뜻한 위로가 필요할 때도 있어요. 감성적인 부분도 채워준다면 금상첨화!"
@@ -147,7 +147,7 @@ const results = [
     {
         minScore: 50,
         title: "선택적 착함: 내 사람에겐 따뜻하겠지...?",
-        image: "https://via.placeholder.com/400x200?text=Result+Image+4", // 실제 이미지 URL로 교체하세요!
+        image: "https://via.placeholder.com/400x200?text=선택적+착함", // 실제 이미지 URL로 교체하세요!
         description: "당신은 모든 사람에게 친절하기보다는, '내 사람'이라고 생각하는 이들에게 특별히 착합니다. 아는 사람에게는 간 쓸개 다 빼줄 것 같지만, 모르는 사람에게는 철저히 무관심할 수 있습니다. 경계가 명확한 당신의 착함입니다.",
         traits: ["친한 사람에게 헌신적", "내 영역 중요시", "선 긋기 명확", "솔직한 감정 표현"],
         advice: "조금만 더 마음의 문을 열어보세요. 새로운 관계 속에서 예상치 못한 기쁨을 찾을 수도 있습니다!"
@@ -155,7 +155,7 @@ const results = [
     {
         minScore: 0, // 가장 낮은 점수 범위
         title: "알 수 없는 착함: 혹시 지금 잠시 스쳐간 바람이세요...?",
-        image: "https://via.placeholder.com/400x200?text=Result+Image+5", // 실제 이미지 URL로 교체하세요!
+        image: "https://via.placeholder.com/400x200?text=알수없는+착함", // 실제 이미지 URL로 교체하세요!
         description: "음... 당신의 착함 지수는 측정 불가 영역에 가깝습니다. 자신만의 세상에서 행복하게 사는 타입이거나, 세상의 비정함에 너무 지쳐버린 걸까요? 당신의 착함을 찾아내는 건 미션 임파서블 같습니다.",
         traits: ["개인주의 성향 강함", "자기애 충만", "세상만사 무관심", "남들 시선 신경 안 씀"],
         advice: "자신을 사랑하는 것도 중요하지만, 가끔은 주변에 따뜻한 눈길을 주는 건 어떨까요? 작은 변화가 큰 행복으로 돌아올 수 있습니다!"
@@ -170,7 +170,8 @@ const startButton = document.getElementById('start-button');
 const questionNumberElement = document.getElementById('question-number');
 const questionTextElement = document.getElementById('question-text');
 const optionsContainer = document.getElementById('options-container');
-const nextButton = document.getElementById('next-button');
+// nextButton은 이제 JavaScript에서 숨기거나 HTML에서 제거했으므로 주석 처리하거나 참조하지 않습니다.
+// const nextButton = document.getElementById('next-button');
 const progressBarFill = document.getElementById('progress-bar-fill');
 const resultTitle = document.getElementById('result-title');
 const resultImage = document.getElementById('result-image');
@@ -181,7 +182,6 @@ const restartButton = document.getElementById('restart-button');
 
 let currentQuestionIndex = 0;
 let totalScore = 0;
-let selectedOptionScore = 0; // 현재 선택된 옵션의 점수를 저장
 
 // 시작 버튼 클릭 이벤트
 startButton.addEventListener('click', () => {
@@ -190,22 +190,6 @@ startButton.addEventListener('click', () => {
     currentQuestionIndex = 0;
     totalScore = 0;
     loadQuestion();
-});
-
-// 다음 질문 버튼 클릭 이벤트
-nextButton.addEventListener('click', () => {
-    if (selectedOptionScore !== 0) { // 옵션이 선택되었을 때만 다음으로 진행
-        totalScore += selectedOptionScore;
-        currentQuestionIndex++;
-        selectedOptionScore = 0; // 다음 질문을 위해 초기화
-        nextButton.disabled = true; // 다음 질문 버튼 비활성화
-
-        if (currentQuestionIndex < questions.length) {
-            loadQuestion();
-        } else {
-            showResult();
-        }
-    }
 });
 
 // 다시 테스트하기 버튼 클릭 이벤트
@@ -226,23 +210,35 @@ function loadQuestion() {
         const button = document.createElement('button');
         button.classList.add('option-button');
         button.textContent = option.text;
-        button.addEventListener('click', () => selectOption(button, option.score));
+        button.addEventListener('click', () => selectOption(button, option.score)); // 옵션 클릭 시 바로 다음으로 넘어감
         optionsContainer.appendChild(button);
     });
 
     updateProgressBar();
 }
 
-// 옵션 선택 함수
+// 옵션 선택 함수 (클릭 시 바로 다음 질문/결과로 이동)
 function selectOption(selectedButton, score) {
-    // 모든 옵션 버튼에서 'selected' 클래스 제거
+    // 모든 옵션 버튼에서 'selected' 클래스 제거 (시각적 초기화)
     document.querySelectorAll('.option-button').forEach(button => {
         button.classList.remove('selected');
     });
-    // 선택된 버튼에 'selected' 클래스 추가
+    // 선택된 버튼에 'selected' 클래스 추가 (시각적 피드백)
     selectedButton.classList.add('selected');
-    selectedOptionScore = score;
-    nextButton.disabled = false; // 옵션 선택 시 다음 버튼 활성화
+
+    // 선택된 옵션 점수를 즉시 총점에 더합니다.
+    totalScore += score;
+
+    // 짧은 지연 후 다음 질문으로 넘어가기 (선택 시 시각적 피드백 확인 시간)
+    setTimeout(() => {
+        currentQuestionIndex++; // 다음 질문 인덱스로 이동
+
+        if (currentQuestionIndex < questions.length) {
+            loadQuestion(); // 다음 질문 로드
+        } else {
+            showResult(); // 모든 질문이 끝나면 결과 표시
+        }
+    }, 300); // 0.3초 (300ms) 지연. 이 값을 조절하여 속도 조절 가능. 0으로 하면 바로 넘어감.
 }
 
 // 진행 바 업데이트 함수
@@ -256,6 +252,7 @@ function showResult() {
     questionScreen.style.display = 'none';
     resultScreen.style.display = 'block';
 
+    // 점수에 따라 적절한 결과 찾기 (가장 높은 점수 범위부터 낮은 점수 범위 순으로 확인)
     let result = results.find(r => totalScore >= r.minScore);
     if (!result) { // 점수 범위에 맞는 결과가 없을 경우 (혹시 모를 오류 방지)
         result = results[results.length - 1]; // 가장 낮은 점수 결과로 기본 설정
