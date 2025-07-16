@@ -170,8 +170,6 @@ const startButton = document.getElementById('start-button');
 const questionNumberElement = document.getElementById('question-number');
 const questionTextElement = document.getElementById('question-text');
 const optionsContainer = document.getElementById('options-container');
-// nextButton은 이제 JavaScript에서 숨기거나 HTML에서 제거했으므로 주석 처리하거나 참조하지 않습니다.
-// const nextButton = document.getElementById('next-button');
 const progressBarFill = document.getElementById('progress-bar-fill');
 const resultTitle = document.getElementById('result-title');
 const resultImage = document.getElementById('result-image');
@@ -201,6 +199,12 @@ restartButton.addEventListener('click', () => {
 
 // 질문 로드 함수
 function loadQuestion() {
+    // 만약 questions 배열의 끝에 도달했다면 바로 결과를 표시
+    if (currentQuestionIndex >= questions.length) {
+        showResult();
+        return;
+    }
+
     const question = questions[currentQuestionIndex];
     questionNumberElement.textContent = `${currentQuestionIndex + 1}/${questions.length}`;
     questionTextElement.textContent = question.question;
@@ -210,7 +214,8 @@ function loadQuestion() {
         const button = document.createElement('button');
         button.classList.add('option-button');
         button.textContent = option.text;
-        button.addEventListener('click', () => selectOption(button, option.score)); // 옵션 클릭 시 바로 다음으로 넘어감
+        // 클릭 이벤트 핸들러: 옵션 선택 시 바로 다음 질문으로 이동
+        button.addEventListener('click', () => selectOption(button, option.score)); 
         optionsContainer.appendChild(button);
     });
 
@@ -232,19 +237,19 @@ function selectOption(selectedButton, score) {
     // 짧은 지연 후 다음 질문으로 넘어가기 (선택 시 시각적 피드백 확인 시간)
     setTimeout(() => {
         currentQuestionIndex++; // 다음 질문 인덱스로 이동
-
-        if (currentQuestionIndex < questions.length) {
-            loadQuestion(); // 다음 질문 로드
-        } else {
-            showResult(); // 모든 질문이 끝나면 결과 표시
-        }
+        loadQuestion(); // 다음 질문을 로드 (showResult는 loadQuestion 내부에서 처리)
     }, 300); // 0.3초 (300ms) 지연. 이 값을 조절하여 속도 조절 가능. 0으로 하면 바로 넘어감.
 }
 
 // 진행 바 업데이트 함수
 function updateProgressBar() {
     const progress = ((currentQuestionIndex + 1) / questions.length) * 100;
-    progressBarFill.style.width = `${progress}%`;
+    // 질문이 모두 끝나면 100%로 채우기
+    if (currentQuestionIndex === questions.length) {
+        progressBarFill.style.width = `100%`;
+    } else {
+        progressBarFill.style.width = `${progress}%`;
+    }
 }
 
 // 결과 표시 함수

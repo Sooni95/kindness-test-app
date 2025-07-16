@@ -85,7 +85,7 @@ button:disabled {
     transition: background-color 0.2s ease, transform 0.1s ease, border 0.2s ease;
     text-align: left;
     border: 2px solid transparent; /* 선택 시 테두리 위해 추가 */
-    font-size: 1em;
+    font-size: 1.1em; /* <-- 이 부분을 1em에서 1.1em으로 키웠습니다. */
     line-height: 1.4;
 }
 
@@ -221,7 +221,7 @@ button:disabled {
 
     .option-button {
         padding: 14px;
-        font-size: 0.95em;
+        font-size: 1.05em; /* <-- 모바일에서도 답변 글씨체 크기 약간 키움 */
     }
 
     #question-text {
