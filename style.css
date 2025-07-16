@@ -35,6 +35,11 @@ header h1 {
     margin-bottom: 10px;
     font-size: 2.2em;
     font-weight: 700;
+    /* h1 자체를 flex 컨테이너로 만들어서 내부 요소를 정렬 */
+    display: flex;
+    justify-content: center; /* 수평 중앙 정렬 */
+    align-items: baseline; /* 텍스트 베이스라인에 맞춰 정렬 */
+    flex-wrap: wrap; /* 공간이 부족하면 줄바꿈 허용 */
 }
 
 /* "made by 수훈" 텍스트 스타일 */
@@ -42,9 +47,10 @@ header h1 .made-by {
     font-size: 0.4em; /* h1 폰트 크기의 40% (더 작게) */
     color: #777; /* 회색으로 표시 */
     font-weight: 400; /* 보통 두께 */
-    vertical-align: super; /* 살짝 위로 올림 */
-    margin-left: 5px; /* 왼쪽 여백 */
-    white-space: nowrap; /* 줄바꿈 방지 */
+    margin-left: 8px; /* 왼쪽 여백 */
+    /* vertical-align 대신 flex container의 align-items를 사용하여 정렬 */
+    /* transform: translateY(-0.1em); */ /* 미세 조정 필요 시 사용 */
+    line-height: 1; /* 줄 높이 설정 */
 }
 
 
@@ -230,6 +236,7 @@ button:disabled {
 
     header h1 .made-by {
         font-size: 0.5em; /* 모바일에서 'made by' 텍스트 크기 조절 */
+        margin-left: 5px; /* 모바일에서 왼쪽 여백 조절 */
     }
 
     header p {
