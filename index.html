@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나의 착함 지수는?🤔</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app-container">
+        <header>
+            <h1>나의 착함 지수는?🤔</h1>
+            <p>유머러스한 질문들로 당신의 착함 유형을 찾아보세요!</p>
+        </header>
+
+        <section id="start-screen">
+            <button id="start-button">테스트 시작하기!</button>
+        </section>
+
+        <section id="question-screen" style="display: none;">
+            <div id="progress-bar-container">
+                <div id="progress-bar-fill"></div>
+            </div>
+            <p id="question-number"></p>
+            <h2 id="question-text"></h2>
+            <div id="options-container">
+                </div>
+            <button id="next-button" disabled>다음 질문</button>
+        </section>
+
+        <section id="result-screen" style="display: none;">
+            <h2 id="result-title"></h2>
+            <img id="result-image" src="" alt="결과 이미지" style="max-width: 100%; height: auto; margin: 20px 0;">
+            <p id="result-description"></p>
+            <div id="result-traits">
+                <h3>주요 특징</h3>
+                <ul id="trait-list"></ul>
+            </div>
+            <div id="result-advice">
+                <h3>나에게 한마디</h3>
+                <p id="advice-text"></p>
+            </div>
+            <button id="restart-button">다시 테스트하기</button>
+            <div id="share-options">
+                </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
